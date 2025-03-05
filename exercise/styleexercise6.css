@@ -1,5 +1,5 @@
 body {
-    background-color: #A2DFCB;
+    background-color: #F0F8FF;
 }
 .Paragraph_title {
     font-size: 30px;
@@ -51,6 +51,16 @@ body {
     padding: 20px;
     text-align: left;
     height: 350px;
+}
+
+#First:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+#Top:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 p {
@@ -126,6 +136,11 @@ u {
 
 .back:hover {
     transform: scale(1.1);
+}
+
+.Image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 .back img {
