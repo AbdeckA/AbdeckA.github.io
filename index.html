@@ -10,15 +10,15 @@
 </head>
 <body>
     <div class="header">
-        <h1>Abdeck Ahmed</h1>
-        <h2>Éleve de 11e année</h2>
+        <h1 id="title1">Abdeck Ahmed</h1>
+        <h2>Éleve de la 11e année</h2>
     </div>
 
     <div class="profile-section">
         <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png" alt="image de Abdeck Ahmed" class="profile-image">
         <div class="profile-text">
             <h2>Bienvenue À mon Portfolio</h2>
-            <p>Bonjour ! Je m'appelle Abdeck Ahmed, un étudiant d'11e année a l'école secondaire catholique Paul-Desmarais. J'ai un fort intérêt pour des matières telles que les mathématiques, la physique et la chimie, et je cherche toujours à réussir académiquement et à repousser mes limites.
+            <p>Bonjour! Je m'appelle Abdeck Ahmed, un étudiant d'11e année a l'école secondaire catholique Paul-Desmarais. J'ai un fort intérêt pour des matières telles que les mathématiques, la physique et la chimie, et je cherche toujours à réussir académiquement et à repousser mes limites.
             </p>
             <p>Ce site présente trois aspects de ma vie: 
                 <ul>
@@ -28,7 +28,7 @@
                 </ul></p>
 
             </p>
-            <p>N'hésitez pas à explorer mon travail, et à <u>me contacter</u> si vous souhaitez échanger!</p>
+            <p>N'hésitez pas à explorer mon travail, et à <u><a href="#contact">me contacter</a></u> si vous souhaitez échanger!</p>
         </div>
     </div>
 
@@ -47,14 +47,38 @@
 
         <div class="project-card">
             <h3 class="project-title">Biographie</h3>
-            <img src="/api/placeholder/400/200" class="project-image">
-            <a href="index.html" class="button">Visiter</a>
+            <img src="https://capitalcurrent.ca/wp-content/uploads/2019/12/Sk%C3%A6rmbillede-2019-12-16-kl.-15.26.42.png" class="project-image">
+            <a href="biographie.html" class="button">Visiter</a>
         </div>
+    </div>
 
-        <div class="project-card">
-            <h3 class="project-title">Me contacter</h3>
-            <img src="/api/placeholder/400/200" class="project-image">
-            <a href="index.html" class="button">Visiter</a>
+    <div class="contact-section" id="contact">
+        <h2>Contactez-moi</h2>
+        <form class="contact-form" action="mailto:abdeckahmed1@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Votre Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Sujet:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit" class="button submit-button">Envoyer</button>
+        </form>
+        <div class="direct-email">
+            <p>Ou contactez-moi directement à: <a href="mailto:abdeckahmed1@gmail.com">abdeckahmed1@gmail.com</a></p>
         </div>
     </div>
 
