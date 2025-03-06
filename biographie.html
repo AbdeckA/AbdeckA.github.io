@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biographie</title>
+    <style>
+        body {
+            background-color: beige;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Iansui', sans-serif;
+        }
+
+        .back {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #B9ECDA;
+            border: 2px solid black;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+
+        .back:hover {
+            transform: scale(1.1);
+        }
+
+        .back img {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .title {
+            font-family: "League Spartan", sans-serif;
+            background-color: #D7FFED;
+            text-align: center;
+            padding: 2px 5px;
+            font-size: 40px;
+            width: 1200px;
+            border-radius: 25px;
+            border: 8px solid black;
+            margin: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .title h1, h2{
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="back" id="back">
+        <a href="index.html"><img id="BackIcon" src="https://www.svgrepo.com/download/305142/arrow-ios-back.svg" alt="Go Back"></a>
+    </div>
+    <div class="title">
+        <h1>Biographie</h1>
+        <h2>Abdeck Ahmed</h2>
+    </div>
+</body>
+</html>
