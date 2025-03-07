@@ -4,7 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">    <title>To be or not to be - Shakespeare</title>
-    <link rel="stylesheet" href="styleexercise5.css">
+    <link href="../styles.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Playwrite IT Moderna", cursive;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;  
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+            gap: 15px; 
+            margin: 30px 15px;
+        }
+
+        .Shakespeare img {
+            width: 150px; 
+            height: 150px;
+            border-radius: 100px; 
+            border: 3px solid #243119;
+            margin: 0 auto;
+        }
+
+
+        .title {
+            text-align: center;
+            margin: 0;
+            color: #243119;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            font-size: 30px;
+            font-style: italic;
+            color: #555;
+            margin: 15px 0;
+        }
+
+
+        .poem_container {
+            background-color: white;
+            border-radius: 100px;
+            border: 4px dashed #243119;
+            padding: 20px;
+            width: 60%;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .poem_text {
+            font-size: 25px;
+            line-height: 1.6;
+            color: #333;
+            text-align: center;
+            transition: transform 0.5s ease;
+
+            
+        }
+
+        .poem_text:hover {
+            transform: scale(1.01);
+        }
+
+        .Shakespeare:hover{
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -64,6 +141,7 @@
             With this regard their currents turn awry <br>
             And lose the name of action.
         </p>
+        <p><a target="_blank" style="color: black;" href="https://www.poetryfoundation.org/poems/56965/speech-to-be-or-not-to-be-that-is-the-question">source</a></p>
         <audio controls src="audios/poem.mp3"></audio>
     </div>
 
