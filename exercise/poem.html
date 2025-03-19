@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">    <title>To be or not to be - Shakespeare</title>
+    <!-- Importation de la police Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">    
+    <title>To be or not to be - Shakespeare</title>
     <link href="../css/styles.css" rel="stylesheet">
     <style>
+        /* Style de base pour le corps de la page */
         body {
             font-family: "Playwrite IT Moderna", cursive;
             margin: 0;
             padding: 0;
             text-align: center;
         }
-        /*  https://css-tricks.com/snippets/css/a-guide-to-flexbox/  */
+        
+        /* En-tête avec flexbox pour centrer le contenu */
         .header {
             display: flex;  
             flex-direction: column;
@@ -22,6 +26,7 @@
             margin: 30px 15px;
         }
 
+        /* Style pour l'image de Shakespeare */
         .Shakespeare img {
             width: 150px; 
             height: 150px;
@@ -30,13 +35,14 @@
             margin: 0 auto;
         }
 
-
+        /* Style pour le titre */
         .title {
             text-align: center;
             margin: 0;
             color: #243119;
         }
 
+        /* Style pour les titres */
         h1 {
             font-size: 32px;
             margin-bottom: 5px;
@@ -49,7 +55,7 @@
             margin: 15px 0;
         }
 
-
+        /* Conteneur pour le poème avec bordure en pointillés */
         .poem_container {
             background-color: white;
             border-radius: 100px;
@@ -58,50 +64,53 @@
             width: 60%;
             max-width: 600px;
             margin: 20px auto;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-
+        /* Style pour le texte du poème avec effet de transition */
         .poem_text {
             font-size: 25px;
             line-height: 1.6;
             color: #333;
             text-align: center;
             transition: transform 0.5s ease;
-
-            
         }
 
+        /* Effet d'agrandissement au survol du poème */
         .poem_text:hover {
             transform: scale(1.01);
         }
 
+        /* Effet d'agrandissement au survol de l'image de Shakespeare */
         .Shakespeare:hover{
             transform: scale(1.1);
             transition: transform 0.3s ease;
         }
-
     </style>
 </head>
 <body>
-
+    <!-- Bouton de retour à la page précédente -->
     <div class="back" id="back">
         <a href="../index.html"><img id="BackIcon" src="../images/arrow-ios-back.svg" alt="Go Back"></a>
     </div>
 
+    <!-- Section d'en-tête avec image et titre -->
     <div class="header">
-    <div class="Shakespeare">
-        <a href="https://fr.wikipedia.org/wiki/William_Shakespeare" target="_blank">
-        <img src="https://hips.hearstapps.com/hmg-prod/images/william-shakespeare-194895-1-402.jpg" alt="William Shakespeare">
-        </a>
+        <!-- Image de Shakespeare avec lien vers Wikipedia -->
+        <div class="Shakespeare">
+            <a href="https://fr.wikipedia.org/wiki/William_Shakespeare" target="_blank">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/william-shakespeare-194895-1-402.jpg" alt="William Shakespeare">
+            </a>
+        </div>
+        <!-- Titre du poème -->
+        <div class="title">
+            <h1>To be or not to be - Hamlet Acte 3, Scène 1</h1>
+            <h4>Par: William Shakespeare</h4>
+        </div>
     </div>
-    <div class="title">
-        <h1>To be or not to be - Hamlet Acte 3, Scène 1</h1>
-        <h4>Par: William Shakespeare</h4>
-    </div>
-</div>
 
+    <!-- Conteneur principal du poème -->
     <div class="poem_container">
+        <!-- Texte du poème avec balises <br> pour les sauts de ligne -->
         <p class="poem_text">
             To be, or not to be, that is the question:<br>
             Whether 'tis nobler in the mind to suffer<br>
@@ -141,9 +150,10 @@
             With this regard their currents turn awry <br>
             And lose the name of action.
         </p>
+        <!-- Lien vers la source du poème -->
         <p><a target="_blank" style="color: black;" href="https://www.poetryfoundation.org/poems/56965/speech-to-be-or-not-to-be-that-is-the-question">source</a></p>
+        <!-- Lecteur audio pour écouter le poème -->
         <audio controls src="audios/poem.mp3"></audio>
     </div>
-
 </body>
 </html>

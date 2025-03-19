@@ -1,7 +1,10 @@
+
+/* pour que la couleur de fond soit constante */
 body {
     background-color: #F0F8FF;
 }
 
+/* code css pour mon bouton de retour.*/
 .back {
     position: fixed;
     top: 10px;

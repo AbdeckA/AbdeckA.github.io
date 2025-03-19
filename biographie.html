@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importation des polices Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Iansui&family=Sigmar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <title>Abdeck Ahmed | Biographie</title>
     <style>
-
+        /* Comportement de défilement fluide */
         html {
             scroll-behavior: smooth;
         }
         
+        /* Style de base pour le corps de la page */
         body {
             background-color: #F0F8FF;
             margin: 0;
@@ -20,7 +22,7 @@
             font-family: 'Iansui', sans-serif;
         }
 
-
+        /* Style pour l'en-tête principal */
         .header {
             font-family: "League Spartan", sans-serif;
             background-color: #D7FFED;
@@ -34,19 +36,23 @@
             transition: transform 0.3s ease;
         }
 
+        /* Animation pour l'en-tête au survol */
         .header:hover {
             transform: scale(1.02);
         }
 
+        /* Espacement pour les titres dans l'en-tête */
         .header h1, h2 {
             margin: 30px 0;
         }
 
+        /* Style pour les sous-titres */
         h2 {
             font-weight: 400;
             font-size: 30px;
         }
 
+        /* Barre de navigation supérieure */
         .top {
             background-color: #B9ECDA;
             border-radius: 25px;
@@ -57,10 +63,12 @@
             transition: transform 0.3s ease;
         }
 
+        /* Animation pour la barre de navigation au survol */
         .top:hover {
             transform: scale(1.02);
         }
 
+        /* Style pour la liste des liens de navigation */
         .top ul {
             list-style-type: none;
             padding: 0;
@@ -69,10 +77,12 @@
             margin: 0;
         }
 
+        /* Style pour les éléments de la liste de navigation */
         .top li {
             display: inline-block;
         }
 
+        /* Style pour les liens dans la navigation */
         .top a {
             text-decoration: none;
             color: black;
@@ -83,10 +93,12 @@
             display: inline-block;
         }
 
+        /* Animation pour les liens au survol */
         .top a:hover {
             transform: scale(1.1);
         }
 
+        /* Section du profil avec disposition flex */
         .profile {
             display: flex;
             justify-content: center;
@@ -97,6 +109,7 @@
             max-width: 1200px;
         }
 
+        /* Style pour l'image de profil */
         .profileimg {
             width: 281px;
             height: 500px;
@@ -106,15 +119,18 @@
             transition: transform 0.3s ease;
         }
 
+        /* Animation pour l'image de profil au survol */
         .profileimg:hover {
             transform: scale(1.05);
         }
 
+        /* Effet spécial pour le texte "blackking" quand on survole l'image */
         .profileimg:hover + .profiletxt .blackking {
             background-color: #B8ECDB;
             border-radius: 15px;
         }
 
+        /* Style pour le texte du profil */
         .profiletxt {
             background-color: #D7FFED;
             border-radius: 25px;
@@ -124,20 +140,24 @@
             transition: transform 0.3s ease;
         }
 
+        /* Animation pour le texte du profil au survol */
         .profiletxt:hover {
             transform: scale(1.02);
         }
 
+        /* Style pour les sous-titres dans le profil */
         .profiletxt h2 {
             font-size: 30px;
             margin: 5px 0;
         }
 
+        /* Style pour les paragraphes dans le profil */
         .profiletxt p {
             font-size: 22px;
             line-height: 1.4;
         }
 
+        /* Section des compétences */
         .skills {
             background-color: #D7FFED;
             border-radius: 25px;
@@ -149,22 +169,26 @@
             transition: transform 0.3s ease;
         }
 
+        /* Animation pour la section des compétences au survol */
         .skills:hover {
             transform: scale(1.02);
         }
 
+        /* Style pour le titre de la section des compétences */
         .skills h2 {
             text-align: center;
             font-size: 30px;
             margin-top: 0;
         }
 
+        /* Style pour le tableau des compétences */
         .skillstable {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
 
+        /* Style pour les en-têtes du tableau */
         .skillstable th {
             font-size: 24px;
             border: 3px solid black;
@@ -173,6 +197,7 @@
             background-color: #B4E7F2;
         }
 
+        /* Style pour les cellules du tableau */
         .skillstable td {
             font-size: 20px;
             border: 3px solid black;
@@ -180,6 +205,7 @@
             text-align: center;
         }
 
+        /* Section des liens préférés */
         .links {
             background-color: #D7FFED;
             border-radius: 25px;
@@ -191,16 +217,19 @@
             transition: transform 0.3s ease;
         }
 
+        /* Animation pour la section des liens au survol */
         .links:hover {
             transform: scale(1.02);
         }
 
+        /* Style pour le titre de la section des liens */
         .links h2 {
             text-align: center;
             font-size: 30px;
             margin-top: 0;
         }
 
+        /* Grille pour afficher les liens */
         .linksgrid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -208,6 +237,7 @@
             margin-top: 20px;
         }
 
+        /* Conteneur pour chaque lien */
         .linkscontainer {
             background-color: #B9ECDA;
             border-radius: 15px;
@@ -217,16 +247,19 @@
             transition: transform 0.3s ease;
         }
 
+        /* Animation pour les conteneurs de liens au survol */
         .linkscontainer:hover {
             transform: scale(1.05);
         }
 
+        /* Style pour les liens dans les conteneurs */
         .linkscontainer a {
             text-decoration: none;
             color: black;
             font-weight: bold;
         }
 
+        /* Section de contact */
         .contact-section {
             background-color: #D7FFED;
             border-radius: 25px;
@@ -239,6 +272,7 @@
             transition: transform 0.3s ease;
         }
 
+        /* Style alternatif pour la section de contact */
         .contact-section {
             background-color: #D7FFED;
             border-radius: 25px;
@@ -250,18 +284,19 @@
             transition: transform 0.3s ease;
         }
 
+        /* Style pour le titre dans la section contact */
         #contact h2 {
             font-weight: 900;
         }
 
-
-
+        /* Style pour le titre de la section contact */
         .contact-section h2 {
             font-size: 30px;
             margin-top: 0;
             margin-bottom: 30px;
         }
 
+        /* Style pour le formulaire de contact */
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -270,10 +305,12 @@
             text-align: left;
         }
 
+        /* Style pour chaque groupe de champs du formulaire */
         .form-group {
             margin-bottom: 20px;
         }
 
+        /* Style pour les étiquettes des champs */
         .form-group label {
             display: block;
             margin-bottom: 8px;
@@ -281,6 +318,7 @@
             font-size: 18px;
         }
 
+        /* Style pour les champs de saisie et les zones de texte */
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -293,6 +331,7 @@
             transition: transform 0.2s, border-color 0.2s;
         }
 
+        /* Style pour les champs lors du focus */
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
@@ -300,6 +339,7 @@
             transform: scale(1.01);
         }
 
+        /* Style pour le bouton d'envoi */
         .submit-button {
             align-self: center;
             padding: 12px 30px;
@@ -308,15 +348,19 @@
             cursor: pointer;
         }
 
+        /* Style pour la section d'email direct */
         .direct-email {
             margin-top: 30px;
             font-size: 18px;
         }
 
+        /* Style pour le lien dans la section d'email */
         .direct-email a {
             text-decoration: underline;
             font-weight: bold;
         }
+
+        /* Style pour les boutons généraux */
         .button {
             display: inline-block;
             background-color: #B9ECDA;
@@ -330,10 +374,13 @@
             transition: transform 0.2s;
         }
 
+        /* Animation pour les boutons au survol */
         .button:hover {
             transform: scale(1.1);
             background-color: #9ADBC9;
         }
+
+        /* Style pour le bouton d'envoi du formulaire */
         .submit-button {
             align-self: center;
             padding: 12px 30px;
@@ -341,15 +388,15 @@
             font-size: 18px;
             cursor: pointer;
         }
-
     </style>
 </head>
 <body>
+    <!-- Bouton de retour -->
     <div class="back" id="back">
         <a href="../index.html"><img id="BackIcon" src="../images/arrow-ios-back.svg" alt="Go Back"></a>
     </div>
 
-
+    <!-- Navigation principale -->
     <div class="top">
         <ul>
             <li><a href="#profile">À propos</a></li>
@@ -359,6 +406,7 @@
         </ul>
     </div>
 
+    <!-- Section du profil avec image et informations -->
     <div id="profile" class="profile">
         <img src="https://images.stockcake.com/public/5/8/1/581a21a7-0d34-4672-b548-6cb290ebb76e_large/ornate-chess-king-stockcake.jpg" class="profileimg">
         <div class="profiletxt">
@@ -384,6 +432,7 @@
         </div>
     </div>
 
+    <!-- Section des compétences avec tableau -->
     <div id="skills" class="skills">
         <h2>Mes compétences</h2>
         <table class="skillstable">
@@ -420,6 +469,7 @@
         </table>
     </div>
 
+    <!-- Section des liens préférés -->
     <div id="links" class="links">
         <h2>Mes liens préférés</h2>
         <div class="linksgrid">
@@ -455,6 +505,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Section de contact avec formulaire -->
     <div class="contact-section" id="contact">
         <h2>Contactez-moi</h2>
         <form class="contact-form" action="mailto:abdeckahmed1@gmail.com" method="post" enctype="text/plain">
@@ -484,6 +536,5 @@
             <p>Ou contactez-moi directement à: <a href="mailto:abdeckahmed1@gmail.com">abdeckahmed1@gmail.com</a></p>
         </div>
     </div>
-
 </body>
 </html>

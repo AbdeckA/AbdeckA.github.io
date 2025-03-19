@@ -17,7 +17,25 @@
             padding: 20px;
             font-family: 'Iansui', sans-serif;
         }
+        #title1 {
+            padding-top: 30px;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .01em; /* Adjust as needed */
+            animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+        }
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
 
+        /* De ligne 20 jusqu'a 34... source: https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+        /* css pour le header qui inclue mon nom */
         .header {
             font-family: "League Spartan", sans-serif;
             background-color: #D7FFED;
@@ -25,10 +43,11 @@
             padding: 2px 5px;
             font-size: 40px;
             width: 1200px;
-            border-radius: 25px;
+            border-radius: 50px;
             border: 8px solid black;
             margin: auto;
             transition: transform 0.3s ease;
+            height: 125px;
         }
 
         .header h1 , h2 {
@@ -40,7 +59,7 @@
             font-size: 30px;
         }
 
-
+        /* css pour le header incluent ma description de la page, et une photo de moi */
         .profile-section {
             display: flex;
             justify-content: center;
@@ -74,12 +93,13 @@
             transition: transform 0.3s ease;
         }
 
-
+        /* enlever la couleur pour les liens */
         a {
             text-decoration: none;
             color: black;
         }
 
+        /* grille avec 1 rangée et 3 colomnes pour mes 3 sous-pages*/
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* src: https://developer.mozilla.org/en-US/docs/Web/CSS/repeat */
@@ -117,7 +137,7 @@
             margin-bottom: 15px;
         }
 
-
+        /* css pour le contactez-moi (formulaire) */
         .button {
             display: inline-block;
             background-color: #B9ECDA;
@@ -217,17 +237,21 @@
 </style>
 </head>
 <body>
+    <!--Section de l'en-tête-->
     <div class="header">
         <h1 id="title1">Abdeck Ahmed</h1>
-        <h2>Éleve de la 11e année</h2>
     </div>
 
+    
+    <!-- Section de profil -->
     <div class="profile-section">
         <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png" alt="image de Abdeck Ahmed" class="profile-image">
         <div class="profile-text">
+             <!-- Texte de présentation/description du site -->
             <h2>Bienvenue À mon Portfolio</h2>
             <p>Bonjour! Je m'appelle Abdeck Ahmed, un étudiant d'11e année a l'école secondaire catholique Paul-Desmarais. J'ai un fort intérêt pour des matières telles que les mathématiques, la physique et la chimie, et je cherche toujours à réussir académiquement et à repousser mes limites.
             </p>
+            <!-- Liste des parties du site -->
             <p>Ce site présente trois aspects de ma vie: 
                 <ul>
                     <li>Mon poème préféré,</li>
@@ -235,21 +259,22 @@
                     <li>et ma autobiographie.</li>   
                 </ul>
             </p>
+            <!-- Lien interne vers la section contact -->
             <p>N'hésitez pas à explorer mon travail, et à <u><a href="#contact">me contacter</a></u> si vous souhaitez échanger!</p>
         </div>
     </div>
-
+<!-- Section des 3 sous-pages -->
     <div class="projects-grid">
         <div class="project-card">
             <h3 class="project-title">Mon Poème Préferé</h3>
-            <img src="https://thewatchfulscribe.co.uk/wp-content/uploads/2023/06/7-Image.jpg"  class="project-image">
-            <a href="exercise/exercise5.html" class="button">Visiter</a>
+            <img src="images/7-Image.jpg"  class="project-image">
+            <a href="exercise/poem.html" class="button">Visiter</a>
         </div>
 
         <div class="project-card">
             <h3 class="project-title">Mon Voyage Parfait</h3>
-            <img src="https://passport-cdn.kiwicollection.com/blog/drive/uploads/2023/10/COVER-Milaidhoo-Island-Maldives-100720-38-Ocean-Residence_Exterior-3.jpg" class="project-image">
-            <a href="exercise/exercise6.html" class="button">Visiter</a>
+            <img src="images/COVER-Milaidhoo-Island-Maldives-100720-38-Ocean-Residence_Exterior-3.jpg" class="project-image">
+            <a href="exercise/voyage.html" class="button">Visiter</a>
         </div>
 
         <div class="project-card">
@@ -259,7 +284,7 @@
         </div>
     </div>
 
-    <!-- Inspirer de: https://www.w3schools.com/html/html_forms.asp-->
+    <!-- Inspirer de: https://www.w3schools.com/html/html_forms.asp -- formulaire pour me contacter-->
 
     <div class="contact-section" id="contact">
         <h2>Contactez-moi</h2>

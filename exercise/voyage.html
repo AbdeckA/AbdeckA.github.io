@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importation des polices Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Iansui&family=Sigmar&display=swap" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
     <title>Mon voyage parfait 🔊</title>
     <style>
+        /* Style de base pour le corps de la page */
         body {
             background-color: #F0F8FF;
         }
+        
+        /* Style pour les titres de paragraphe */
         .Paragraph_title {
             font-size: 30px;
             text-align: left;
         }
 
+        /* Style pour l'image principale */
         .Image {
             width: 600px;
             height: 390px;
@@ -23,6 +28,7 @@
             object-fit: cover;
         }
 
+        /* Style pour le drapeau */
         .Flag {
             width: 50px;
             height: auto;
@@ -31,6 +37,7 @@
             margin-left: 5px;
         }
 
+        /* Style pour la section d'en-tête */
         #Top {
             font-family: Iansui;
             background-color: #B9ECDA;
@@ -43,6 +50,7 @@
             margin: auto;
         }
 
+        /* Conteneur flex pour les éléments principaux */
         .content-wrapper {
             display: flex;
             justify-content: center;
@@ -51,6 +59,7 @@
             margin-top: 15px;
         }
 
+        /* Style pour la première section de contenu */
         #First {
             font-family: Iansui;
             background-color: #D7FFED;
@@ -62,28 +71,32 @@
             height: 350px;
         }
 
+        /* Effet d'agrandissement au survol pour la première section */
         #First:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;
         }
 
+        /* Effet d'agrandissement au survol pour l'en-tête */
         #Top:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;
         }
 
+        /* Style pour les paragraphes */
         p {
             font-size: 22px;
             margin-right: 10px;
         }
 
-
+        /* Style pour le texte souligné */
         u {
             font-family: Iansui;
             text-decoration: underline wavy;
             text-underline-offset: 3px;
         }
 
+        /* Style pour les tableaux d'attractions */
         .sites-table {
             width: 1200px;
             margin: 20px auto;
@@ -94,53 +107,63 @@
             border: 8px solid black;
         }
 
+        /* Style pour les en-têtes de tableau */
         .sites-table th {
             font-size: 30px;
             border: 2px solid black;
             padding: 10px;
             text-align: center;
             background-color: #B4E7F2;
-
         }
+        
+        /* Style pour les cellules de tableau */
         .sites-table td {
             font-size: 22px;
             border: 2px solid black;
             padding: 10px;
             text-align: center;
         }
+        
+        /* Conteneur pour les images dans le tableau */
         .ImageContainer1 {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
         }
-        .image2 {
+        
+        /* Style pour les images secondaires */
+        .image2, .image3 {
             width: 250px;
             height: auto;
             margin-bottom: 15px;
             border-radius: 10px;
         }
 
+        /* Effet d'agrandissement au survol pour les images secondaires */
         .image2:hover {
             transform: scale(1.1);
             transition: transform 0.3s ease;
         }
-
-        
     </style>
 </head>
 <body>
+    <!-- Musique d'ambiance en arrière-plan -->
     <audio autoplay loop>
         <source src="audios/tropicalmusic.mp3">
     </audio>
 
+    <!-- Bouton de retour vers la page d'accueil -->
     <div class="back" id="back">
         <a href="../index.html"><img id="BackIcon" src="../images/arrow-ios-back.svg" alt="Go Back"></a>
     </div>
 
+    <!-- Titre principal de la page -->
     <div id="Top"> 
         <h1>Mon Voyage Parfait!</h1>
     </div>
+    
+    <!-- Section principale avec texte et image -->
     <div class="content-wrapper">
         <div id="First"> 
             <h1>
@@ -151,9 +174,11 @@
             
             <p><br>Les Maldives sont un pays tropical composé de nombreuses petites îles dans l'océan Indien. C'est une destination célèbre pour ses plages de sable blanc, son eau turquoise et ses hôtels luxueux sur l'eau. Les visiteurs peuvent nager, plonger et voir des poissons colorés et des coraux. Le climat est chaud toute l'année, parfait pour se détendre au soleil. La nourriture locale est délicieuse, avec beaucoup de poisson et de noix de coco. Les Maldives sont un endroit idéal pour des vacances relaxantes et inoubliables.</p>
         </div>
+        <!-- Image principale des Maldives -->
         <img src="https://i.ibb.co/9kWW8vYG/image.png" alt="Maldives" class="Image">
     </div>
 
+    <!-- Tableau des sites à visiter -->
     <table class="sites-table">
         <tr>
             <th colspan="3">Sites à Visiter aux Maldives</th>
@@ -161,7 +186,7 @@
         <tr>
             <td>
                 <div class="ImageContainer1">
-                
+                <!-- Image de Malé avec lien vers Wikipedia -->
                 <a target="_blank" href="https://en.wikipedia.org/wiki/Mal%C3%A9"><img src="https://images.goway.com/production/hero/iStock-538010535.jpg" class="image2"></img></a>
                 Malé (Capitale)
                 
@@ -169,12 +194,14 @@
             </td>
             <td>
                 <div class="ImageContainer1">
+                <!-- Image d'hôtel sous-marin avec lien -->
                 <a target="_blank" href="https://www.conradmaldives.com/stay/the-muraka/"><img src="https://mymodernmet.com/wp/wp-content/uploads/2017/03/luxury-underwater-hotels-thumbnail.jpg" class="image2"></img></a>
                 Les Hôtels sous-marins
                 </div>
             </td>
             <td>
                 <div class="ImageContainer1">
+                <!-- Image du musée national avec lien -->
                 <a target="_blank" href="https://fr.tripadvisor.ca/Attraction_Review-g298571-d1068509-Reviews-National_Museum-Male.html"><img src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/06/28/67b81ff296fc8d828e876cf7548b0686_1000x1000.jpg" class="image2"></img></a>
                 Musée national	
                 </div>
@@ -183,6 +210,7 @@
         <tr>
             <td>
                 <div class="ImageContainer1">
+                <!-- Image du Grand Récif Sud avec lien -->
                 <a target="_blank" href="https://www.flyedelweiss.com/ca/fr/destinations/tips/scuba-diving/maldives.html#:~:text=Le%20r%C3%A9cif%20domestique%20de%20Filitheyo,plong%C3%A9e%20se%20trouvent%20%C3%A0%20proximit%C3%A9.">
                 <img src="https://plongee.voyages-adekua.fr/sites/default/files/plongee/produit/croisiere-plongee-dans-grand-sud-maldives-avec-21-immersions/images/croisiere-plongee-maldives-dive-trip-adekua-13.jpg" class="image2"></img>
                 </a>
@@ -191,6 +219,7 @@
             </td>
             <td>
                 <div class="ImageContainer1">
+                <!-- Image de l'île de Thulusdhoo avec lien -->
                 <a target="_blank" href="https://islandii.com/thulusdhoo/">
                 <img src="https://wiotto.com/frontend/webcontent/websites/10/file/most-beautiful-islands-in-maldives_Photo.jpg" class="image2"></img>
                 </a>
@@ -199,6 +228,7 @@
             </td>
             <td>
                 <div class="ImageContainer1">
+                <!-- Image du centre de plongée avec lien -->
                 <a target="_blank" href="https://ultramarina.com/voyage-plongee-ocean-indien/maldives/centres-de-plongee-maldives">
                 <img src="https://d1vp8nomjxwyf1.cloudfront.net/wp-content/uploads/sites/110/2017/03/11142214/diamonds_thudufushi_diving_02.jpg" class="image2"></img>
                 </a>
@@ -207,6 +237,8 @@
             </td>
         </tr>
     </table>
+    
+    <!-- Tableau des plats à goûter -->
     <table class="sites-table">
         <tr>
             <th colspan="3">Nourriture à manger</th>
@@ -214,19 +246,22 @@
         <tr>
             <td>
                 <div class="ImageContainer1">
-                <img src="https://www.holidify.com/images/cmsuploads/compressed/garudhiya_20180726111600.jpg" class="image2"></img>
+                <!-- Image de Garudhiya -->
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/garudhiya_20180726111600.jpg" class="image3"></img>
                 Garudhiya (soupe de poisson)
                 </div>
             </td>
             <td>
                 <div class="ImageContainer1">
-                <img src="https://www.holidify.com/images/cmsuploads/compressed/Mashuni_(382668832)_20180726111808.jpg" class="image2"></img>
+                <!-- Image de Mas Huni -->
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/Mashuni_(382668832)_20180726111808.jpg" class="image3"></img>
                 Mas Huni (thon fumé râpé)
                 </div>
             </td>
             <td>
                 <div class="ImageContainer1">
-                <img src="https://www.holidify.com/images/cmsuploads/compressed/masroshi_20180726111905.JPG" class="image2"></img>
+                <!-- Image de Masroshi -->
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/masroshi_20180726111905.JPG" class="image3"></img>
                 Masroshi (chapati farci au thon)	
                 </div>
             </td>
@@ -234,19 +269,22 @@
         <tr>
             <td>
                 <div class="ImageContainer1">
-                <img src="https://www.holidify.com/images/cmsuploads/compressed/Biskeemiya_20180726112305.jpg" class="image2"></img>
+                <!-- Image de Bis Keemiya -->
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/Biskeemiya_20180726112305.jpg" class="image3"></img>
                 Bis Keemiya (samoussa)               
                 </div>
             </td>
             <td>
                 <div class="ImageContainer1">
-                <img src="https://www.holidify.com/images/cmsuploads/compressed/banaana_20180726112648.jpg" class="image2"></img>
+                <!-- Image de Boshi Mashuni -->
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/banaana_20180726112648.jpg" class="image3"></img>
                 Boshi Mashuni (salade de fleurs de bananier)	                
                 </div>
             </td>
             <td>
                 <div class="ImageContainer1">
-                <img src="https://www.holidify.com/images/cmsuploads/compressed/yamfry_20180726114101.jpg" class="image2"></img>
+                <!-- Image d'ignames frites -->
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/yamfry_20180726114101.jpg" class="image3"></img>
                 Ignames frites               
             </div>
             </td>
