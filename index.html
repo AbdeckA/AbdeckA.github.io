@@ -3,158 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Importation de la police Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">    
-    <title>To be or not to be - Shakespeare</title>
-    <link href="../css/styles.css" rel="stylesheet">
-    <style>
-        /* Style de base pour le corps de la page */
+    <link href="https://fonts.googleapis.com/css2?family=Iansui&family=Sigmar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <title>Abdeck Ahmed | Portfolio</title>
+    <link href="css/styles.css" rel="stylesheet">
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: "Playwrite IT Moderna", cursive;
+            background-color: #F0F8FF;
             margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        
-        /* En-tête avec flexbox pour centrer le contenu */
-        .header {
-            display: flex;  
-            flex-direction: column;
-            align-items: center; 
-            justify-content: center;
-            gap: 15px; 
-            margin: 30px 15px;
-        }
-
-        /* Style pour l'image de Shakespeare */
-        .Shakespeare img {
-            width: 150px; 
-            height: 150px;
-            border-radius: 100px; 
-            border: 3px solid #243119;
-            margin: 0 auto;
-        }
-
-        /* Style pour le titre */
-        .title {
-            text-align: center;
-            margin: 0;
-            color: #243119;
-        }
-
-        /* Style pour les titres */
-        h1 {
-            font-size: 32px;
-            margin-bottom: 5px;
-        }
-
-        h4 {
-            font-size: 30px;
-            font-style: italic;
-            color: #555;
-            margin: 15px 0;
-        }
-
-        /* Conteneur pour le poème avec bordure en pointillés */
-        .poem_container {
-            background-color: white;
-            border-radius: 100px;
-            border: 4px dashed #243119;
             padding: 20px;
-            width: 60%;
-            max-width: 600px;
-            margin: 20px auto;
+            font-family: 'Iansui', sans-serif;
+        }
+        #title1 {
+            padding-top: 30px;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .01em; /* Adjust as needed */
+            animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+        }
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
         }
 
-        /* Style pour le texte du poème avec effet de transition */
-        .poem_text {
-            font-size: 25px;
-            line-height: 1.6;
-            color: #333;
+        /* De ligne 20 jusqu'a 34... source: https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+        /* css pour le header qui inclue mon nom */
+        .header {
+            font-family: "League Spartan", sans-serif;
+            background-color: #D7FFED;
             text-align: center;
-            transition: transform 0.5s ease;
+            padding: 2px 5px;
+            font-size: 40px;
+            width: 1200px;
+            border-radius: 50px;
+            border: 8px solid black;
+            margin: auto;
+            transition: transform 0.3s ease;
+            height: 125px;
         }
 
-        /* Effet d'agrandissement au survol du poème */
-        .poem_text:hover {
+        .header h1 , h2 {
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 30px;
+        }
+
+        /* css pour le header incluent ma description de la page, et une photo de moi */
+        .profile-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 40px auto;
+            width: 85%;
+            max-width: 1200px;
+        }
+
+        .profile-text {
+            background-color: #D7FFED;
+            border-radius: 25px;
+            border: 8px solid black;
+            padding: 25px;
+            width: 800px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-text h2 {
+            font-size: 30px;
+            margin: 5px 0;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border: solid black 8px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* enlever la couleur pour les liens */
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* grille avec 1 rangée et 3 colomnes pour mes 3 sous-pages*/
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* src: https://developer.mozilla.org/en-US/docs/Web/CSS/repeat */
+            gap: 20px;
+            width: 85%;
+            margin: 40px auto;
+        }
+
+        .project-card {
+            background-color: #D7FFED;
+            border-radius: 25px;
+            border: 8px solid black;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+
+        .project-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+
+        .project-image {
+            width: 100%;
+            height: 180px;
+            border-radius: 15px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        /* css pour le contactez-moi (formulaire) */
+        .button {
+            display: inline-block;
+            background-color: #B9ECDA;
+            border: 3px solid black;
+            border-radius: 15px;
+            padding: 10px 20px;
+            margin-top: 15px;
+            font-size: 18px;
+            text-decoration: none;
+            color: black;
+            transition: transform 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background-color: #9ADBC9;
+        }
+
+        .contact-section {
+            background-color: #D7FFED;
+            border-radius: 25px;
+            border: 8px solid black;
+            padding: 30px;
+            text-align: center;
+            max-width: 700px;
+            margin: 40px auto;
+            transition: transform 0.3s ease;
+        }
+
+        #contact h2 {
+            font-weight: 900;
+        }
+
+
+
+        .contact-section h2 {
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 3px solid black;
+            border-radius: 10px;
+            font-family: 'Iansui', sans-serif;
+            font-size: 16px;
+            background-color: #F0F8FF;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #9ADBC9;
             transform: scale(1.01);
         }
 
-        /* Effet d'agrandissement au survol de l'image de Shakespeare */
-        .Shakespeare:hover{
-            transform: scale(1.1);
-            transition: transform 0.3s ease;
+        .submit-button {
+            align-self: center;
+            padding: 12px 30px;
+            margin-top: 10px;
+            font-size: 18px;
+            cursor: pointer;
         }
-    </style>
+
+        .direct-email {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        .direct-email a {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+</style>
 </head>
 <body>
-    <!-- Bouton de retour à la page précédente -->
-    <div class="back" id="back">
-        <a href="../index.html"><img id="BackIcon" src="../images/arrow-ios-back.svg" alt="Go Back"></a>
-    </div>
-
-    <!-- Section d'en-tête avec image et titre -->
+    <!--Section de l'en-tête-->
     <div class="header">
-        <!-- Image de Shakespeare avec lien vers Wikipedia -->
-        <div class="Shakespeare">
-            <a href="https://fr.wikipedia.org/wiki/William_Shakespeare" target="_blank">
-            <img src="https://hips.hearstapps.com/hmg-prod/images/william-shakespeare-194895-1-402.jpg" alt="William Shakespeare">
-            </a>
+        <h1 id="title1">Abdeck Ahmed</h1>
+    </div>
+
+    
+    <!-- Section de profil -->
+    <div class="profile-section">
+        <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png" alt="image de Abdeck Ahmed" class="profile-image">
+        <div class="profile-text">
+             <!-- Texte de présentation/description du site -->
+            <h2>Bienvenue À mon Portfolio</h2>
+            <p>Bonjour! Je m'appelle Abdeck Ahmed, un étudiant d'11e année a l'école secondaire catholique Paul-Desmarais. J'ai un fort intérêt pour des matières telles que les mathématiques, la physique et la chimie, et je cherche toujours à réussir académiquement et à repousser mes limites.
+            </p>
+            <!-- Liste des parties du site -->
+            <p>Ce site présente trois aspects de ma vie: 
+                <ul>
+                    <li>Mon poème préféré,</li>
+                    <li>mon voyage parfait</li>
+                    <li>et ma autobiographie.</li>   
+                </ul>
+            </p>
+            <!-- Lien interne vers la section contact -->
+            <p>N'hésitez pas à explorer mon travail, et à <u><a href="#contact">me contacter</a></u> si vous souhaitez échanger!</p>
         </div>
-        <!-- Titre du poème -->
-        <div class="title">
-            <h1>To be or not to be - Hamlet Acte 3, Scène 1</h1>
-            <h4>Par: William Shakespeare</h4>
+    </div>
+<!-- Section des 3 sous-pages -->
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3 class="project-title">Mon Poème Préferé</h3>
+            <img src="images/7-Image.jpg"  class="project-image">
+            <a href="exercise/poem.html" class="button">Visiter</a>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title">Mon Voyage Parfait</h3>
+            <img src="images/COVER-Milaidhoo-Island-Maldives-100720-38-Ocean-Residence_Exterior-3.jpg" class="project-image">
+            <a href="exercise/voyage.html" class="button">Visiter</a>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title">Biographie</h3>
+            <img src="https://capitalcurrent.ca/wp-content/uploads/2019/12/Sk%C3%A6rmbillede-2019-12-16-kl.-15.26.42.png" class="project-image">
+            <a href="biographie.html" class="button">Visiter</a>
         </div>
     </div>
 
-    <!-- Conteneur principal du poème -->
-    <div class="poem_container">
-        <!-- Texte du poème avec balises <br> pour les sauts de ligne -->
-        <p class="poem_text">
-            To be, or not to be, that is the question:<br>
-            Whether 'tis nobler in the mind to suffer<br>
-            The slings and arrows of outrageous fortune,<br>
-            Or to take arms against a sea of troubles<br>
-            And by opposing end them.<br><br>
+    <!-- Inspirer de: https://www.w3schools.com/html/html_forms.asp -- formulaire pour me contacter-->
 
-            To die—to sleep, <br>
-            No more; and by a sleep to say we end <br>
-            The heart-ache and the thousand natural shocks <br>
-            That flesh is heir to: 'tis a consummation <br>
-            Devoutly to be wish'd. To die, to sleep; <br>
-            To sleep, perchance to dream—ay, there's the rub: <br>
-            For in that sleep of death what dreams may come, <br>
-            When we have shuffled off this mortal coil, <br>
-            Must give us pause—there's the respect <br>
-            That makes calamity of so long life. <br><br>
-
-            For who would bear the whips and scorns of time, <br>
-            Th'oppressor's wrong, the proud man's contumely, <br>
-            The pangs of dispriz'd love, the law's delay, <br>
-            The insolence of office, and the spurns <br>
-            That patient merit of th'unworthy takes, <br>
-            When he himself might his quietus make <br>
-            With a bare bodkin? Who would fardels bear, <br>
-            To grunt and sweat under a weary life, <br>
-            But that the dread of something after death, <br>
-            The undiscovere'd country, from whose bourn <br>
-            No traveller returns, puzzles the will, <br>
-            And makes us rather bear those ills we have <br>
-            Than fly to others that we know not of? <br><br>
-
-            Thus conscience doth make cowards of us all, <br>
-            And thus the native hue of resolution <br>
-            Is sicklied o'er with the pale cast of thought, <br>
-            And enterprises of great pith and moment <br>
-            With this regard their currents turn awry <br>
-            And lose the name of action.
-        </p>
-        <!-- Lien vers la source du poème -->
-        <!--   Une des seules fois que j'ai utilisé style en ligne   -->
-        <p><a target="_blank" style="color: black;" href="https://www.poetryfoundation.org/poems/56965/speech-to-be-or-not-to-be-that-is-the-question">source</a></p>
-        <!-- Lecteur audio pour écouter le poème -->
-        <audio controls src="audios/poem.mp3"></audio>
+    <div class="contact-section" id="contact">
+        <h2>Contactez-moi</h2>
+        <form class="contact-form" action="mailto:abdeckahmed1@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Votre Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Sujet:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit" class="button submit-button">Envoyer</button>
+        </form>
+        <div class="direct-email">
+            <p>Ou contactez-moi directement à: <a href="mailto:abdeckahmed1@gmail.com">abdeckahmed1@gmail.com</a></p>
+        </div>
     </div>
+
 </body>
 </html>
