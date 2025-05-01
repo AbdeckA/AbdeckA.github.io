@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Travaille 2</title>
+  <script>
+    function Initiales() {
+        nom = document.getElementById("noms").value.split(" ")
+        initials = ""
+        for (let i = 0; i<nom.length; i++) {
+            initials += nom[i].slice(0, 1).toUpperCase() + "."
+        }
+        username = ""
+        for (let i = 0; i<nom.length-1; i++) {
+            username += nom[i].slice(0, 1).toLowerCase()
+        }
+        
+        document.getElementById("initiales").innerHTML = "Initiales: " + initials;
+        document.getElementById("nomComplete").innerHTML = "Nom Complete: " + nom.join(" ");
+        document.getElementById("nomUtilisateur").innerHTML = "Nom d'utilisateur: " + username + nom[nom.length-1];
+    }
+  </script>
+</head>
+<body>
+  <h1>Travaille 2</h1>
+  <label for="noms">Nom complet:</label>
+  <input type="text" id="noms">
+  <br><br>
+  <input type="button" id="btnSoumet" onclick="Initiales()" value="Soumettre">
+  <p id="initiales"></p>
+  <p id="nomComplete"></p>
+  <p id="nomUtilisateur"></p>
+</body>
+</html>
